@@ -54,4 +54,11 @@ Tiêu chí đánh giá: Khi thỏa tất cả các tiêu chí phía dưới đâ
 
     - Bên trong Action nếu có comment đầy đủ, đánh dấu từng bước/khâu xử lý bên trong để người khác dễ dàng đọc hiểu. Thì được cộng 0.5đ.
 
+</details>
+
 <details>
+<summary>References</summary>
+    
+    - https://www.softwaretestingo.com/notepad-test-cases/
+    
+</details>
