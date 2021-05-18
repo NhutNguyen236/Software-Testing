@@ -1,0 +1,64 @@
+﻿TEST CASE,TC 04,User can save the file with the same file name that the earlier saved file and choose the same file path.
+test objective,TO 04,Verify that user can save the file with the same file name that the earlier saved file and choose the same file path.
+
+step,1. Launch Notepad app
+
+,window,control,value
+enter,main window,textbox,abc
+
+step,"2. Click ""File"" option on menu bar"
+step,"3. Click ""Save as"" option in dropdown option list"
+,window,keys
+type,main window,%f
+type,main window,a
+
+step,4. Choose the same file path with the earlier saved file
+
+,window,control,click type,x,y
+click,save as window,address toolbar,left
+
+,window,keys
+type,save as window,C:\Users\Public\Documents
+
+,window,keys
+hold key,save as window,{enter}
+
+,keys
+release key,{enter}
+
+step,5. Enter file name is the same the earlier saved file
+
+,window,control,value
+enter,save as window,filename combobox,Example
+
+step,"6. Click ""Save"" button to save file"
+
+,window,keys
+type,save as window,{enter}
+
+,window,variable
+does window exist,confirm save as window,>> confirm save as window
+
+,condition
+if,#  confirm save as window = 1
+
+,window,control,click type,x,y
+click,confirm save as window,yes button,left
+
+end if
+
+step,7. Check if file is saved
+
+,program
+start program,C:\Users\Public\Documents\Example.txt
+
+,window,variable
+does window exist,main window,>> main window
+,condition
+if,# main window = 1
+
+,window,control,value
+check,main window,textbox,abc
+
+end if
+
