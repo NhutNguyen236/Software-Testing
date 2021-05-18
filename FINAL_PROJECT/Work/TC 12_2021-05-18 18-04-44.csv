@@ -1,0 +1,28 @@
+﻿TEST CASE,TC 12,User search for single or multiple characters and words through the file.
+test objective,TO 12,Verify that user search for single or multiple characters and words through the file.
+
+step,1.  Launch Notepad app
+
+step,2. Open a file
+,window,control,value
+enter,main window,textbox,eg dbe
+
+step,3. Find single or multiple characters and words in this file
+,window,keys
+hold key,main window,^f
+
+,window,control,value
+enter,find window,findwhat textbox,eg dbe
+
+,window,control,click type,x,y
+click,find window,findnext button,left
+
+,window,control,click type,x,y
+click,find window,cancel button,left
+
+step,4. Check if text is found
+,window,control,value
+check,main window,textbox,eg dbe
+
+
+

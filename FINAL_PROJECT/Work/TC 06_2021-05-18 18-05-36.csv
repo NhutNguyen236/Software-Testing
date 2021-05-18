@@ -1,0 +1,63 @@
+﻿TEST CASE,TC 06,User can save the file using CTRL+S hotkey.
+test objective,TO 06,Verify that user can save the file using CTRL+S hotkey.
+
+step,1. Launch Notepad app
+
+,window,control,value
+enter,main window,textbox,abc
+
+step,2. Tap CTRL + S to save file
+
+,window,keys
+hold key,main window,^s
+
+step,3. Add address to save file
+
+,window,control,click type,x,y
+click,save as window,address toolbar,left
+
+,window,keys
+type,save as window,C:\Users\Public\Documents
+
+,window,keys
+hold key,save as window,{enter}
+
+,keys
+release key,{enter}
+
+step,4. Add file name
+
+,window,control,value
+enter,save as window,filename combobox,Example
+
+step,"5. Click ""Save"" button"
+
+,window,keys
+type,save as window,{enter}
+
+,window,variable
+does window exist,confirm save as window,>> confirm save as window
+
+,condition
+if,#  confirm save as window = 1
+
+,window,control,click type,x,y
+click,confirm save as window,yes button,left
+
+end if
+
+step,6. Check if file is saved
+
+,program
+start program,C:\Users\Public\Documents\Example.txt
+
+,window,variable
+does window exist,main window,>> main window
+,condition
+if,# main window = 1
+
+,window,control,value
+check,main window,textbox,abc
+
+end if
+

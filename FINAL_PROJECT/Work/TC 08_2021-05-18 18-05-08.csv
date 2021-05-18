@@ -1,0 +1,12 @@
+﻿TEST CASE,TC 08,User can write/type alphabets from a standard keyboard.
+test objective,TO 08,Verify that user can write/type alphabets from a standard keyboard.
+
+step,1. Launch Notepad app
+step,2. Add text as alphabets to Notepad editor window
+,window,control,value
+enter,main window,textbox,abcd
+
+step,3. Check if text is added correctly
+,window,control,value
+check,main window,textbox,abcd
+
